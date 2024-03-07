@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { DB_NAME } from "../constants.js";
 
-// async is bcz DB is in another contenet
+// async -> bcz DB is in another contenet
 const connectDB = async() => {
     try {
         const connectionInstance =  await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
