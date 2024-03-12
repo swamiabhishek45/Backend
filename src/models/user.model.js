@@ -41,8 +41,8 @@ const userSchema = new Schema(
     },
     refreshToken: String,
   },
-  { timestamps: true }
-); // createdAt, updatedAt
+  { timestamps: true } // createdAt, updatedAt 
+); 
 
 // encrypt password after storing data in DB
 userSchema.pre("save", async function (next) {
