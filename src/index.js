@@ -2,6 +2,9 @@
 import dotenv from 'dotenv';
 import connectDB from "./db/db.js";
 
+import express from 'express';
+const app = express();
+
 dotenv.config({
   path: './env'
 })
@@ -37,7 +40,7 @@ const app = express();
       console.log("App is listening on port " + process.env.PORT);
     });
   } catch (error) {
-    console.log("ERROR: ", error);
+    console.error("ERROR: ", error);
     throw error;
   }
 })();
